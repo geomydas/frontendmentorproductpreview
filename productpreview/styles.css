@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+/* end of css reset */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3eae3;
+}
+main {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.text {
+  width: 50%;
+}
+.img-pc {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.text {
+  padding: 32px;
+}
+h2 {
+  text-transform: uppercase;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+}
+h1 {
+  text-transform: capitalize;
+  font-family: Fraunces, sans-serif;
+  font-size: 2rem;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+p {
+  font-family: Montserrat, sans-serif;
+  color: grey;
+  font-weight: 500;
+}
+.price {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+h3 {
+  color: #417d66;
+  font-family: Fraunces, sans-serif;
+  font-size: 2.5rem;
+}
+span {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+  font-family: Montserrat, sans-serif;
+}
+button {
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background-color: #3d8168;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+button:hover {
+  background-color: #1a4031;
+}
+.img-mobile,
+.img-mobile-img {
+  display: none;
+}
+@media only screen and (max-width: 595px) {
+  .img-mobile,
+  .img-mobile-img {
+    display: block !important;
+  }
+  .img,
+  .img-pc {
+    display: none !important;
+  }
+  main {
+    flex-direction: column !important;
+    max-width: 400px;
+    width: 95%;
+  }
+  .text {
+    width: 100%;
+  }
+  .img-mobile-img {border-top-left-radius: 10px;
+border-top-right-radius: 10px;}
+}
